@@ -1,6 +1,6 @@
 #!/bin/sh
 
-feh --bg-scale ~/jdunDWM/dwm/wallpapers/wp.jpg
+feh --bg-scale ~/dwm-config/dwm/wallpapers/wp.jpg
 xset -b
 setxkbmap us &
 dwmblocks &

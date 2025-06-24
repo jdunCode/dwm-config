@@ -1,6 +1,6 @@
 # 🖥️ jdunDWM — мой первый конфиг dwm
 
-![my dwm](~/jdunDWM/image.png)
+![my dwm](~/dwm-config/image.png)
 
 *Минималистичный оконный менеджер для Arch Linux*
 
@@ -20,9 +20,9 @@ sudo pacman -S xorg-server xorg-xinit git base-devel libx11 libxft libxinerama f
 ### 1. Для пользователей с другим DE/WM
 Скопируйте файлы вручную:
 ```bash
-cp -r ~/jdunDWM/temp/rofi/ ~/.config/
-cp ~/jdunDWM/temp/startdwm.sh /usr/local/bin/
-cp ~/jdunDWM/temp/dwm.desktop /usr/local/share/xsessions/
+cp -r ~/dwm-config/temp/rofi/ ~/.config/
+cp ~/dwm-config/startdwm.sh /usr/local/bin/
+cp ~/dwm-config/temp/dwm.desktop /usr/local/share/xsessions/
 make
 sudo make install
 ```
