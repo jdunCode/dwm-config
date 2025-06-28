@@ -2,6 +2,8 @@
 
 feh --bg-scale ~/dwm-config/dwm/wallpapers/wp.jpg
 xset -b
+
+#$HOME/.config/polybar/launch.sh &
 setxkbmap us &
 dwmblocks &
 
