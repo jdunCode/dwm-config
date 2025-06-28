@@ -16,6 +16,10 @@ sudo pacman -S base base-devel git dmenu alacritty feh ttf-font-awesome rofi fir
 ## ⚙️ Установка
 
 ### 1. Для пользователей с другим DE/WM
+Склонируйте репозиторий:
+```bash
+git clone https://github.com/jdunCode/dwm-config.git
+```
 Скопируйте файлы вручную:
 ```bash
 cp -r ~/dwm-config/.config/rofi/ ~/.config/
