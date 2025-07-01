@@ -1,9 +1,9 @@
 #!/bin/sh
 
-feh --bg-scale ~/dwm-config/dwm/wallpapers/wp.jpg
+feh --bg-scale ~/dwm-config/dwm/wallpapers/island-night.png
 xset -b
 
-#$HOME/.config/polybar/launch.sh &
+picom -b --config ~/.config/picom/picom.conf
 setxkbmap us &
 dwmblocks &
 

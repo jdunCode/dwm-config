@@ -5,13 +5,23 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char *fonts[]          = { "JetBrains Mono NerdFont:size=12:style=Bold", "monospace:size=12" };
+static const char dmenufont[]       = "JetBrains Mono NerdFont:size=12:syle=Bold";
+
+
+static const char col_gray1[] = "#0a0a0a";
+static const char col_gray2[] = "#262626";
+static const char col_gray3[] = "#cdd6f4";
+static const char col_gray4[] = "#0a0a0a";
+static const char col_cyan[] = "#99f6e4";
+
+//static const char col_gray1[]       = "#000000";
+//static const char col_gray2[]       = "#a89984";
+//static const char col_gray3[]       = "#ebdbb2";
+//static const char col_gray4[]       = "#282828";
+//static const char col_cyan[]        = "#a89984";
+
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -19,7 +29,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -63,7 +73,6 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *flameshot[]  = { "flameshot", "gui", NULL };
 static const char *flameshotFull[]  = { "flameshot", "full", "-c", NULL };
-static const char *firefox[]  = { "firefox", NULL };
 static const char *powerMenu[]  = { "power-menu.sh", NULL };
 static const char *changeLayout[]  = { "change_language.sh", NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", "-show-icons", NULL };
@@ -97,16 +106,16 @@ static const Key keys[] = {
 	{0, 														XK_Print,  spawn, 				 {.v = flameshotFull } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn, 				 {.v = flameshot } },
 
-	{ ControlMask|ShiftMask,        XK_f,      spawn, 				 {.v = firefox } },
 	{ ControlMask|ShiftMask,        XK_Escape, spawn, 			   {.v = powerMenu } },
 	{ MODKEY,                       XK_space,  spawn, 				 {.v = changeLayout} },
 	{ ControlMask|ShiftMask,        XK_d,      spawn, 				 {.v = roficmd } },
 
-	{0, 														XF86XK_AudioMute, 				 spawn, 	 			SHCMD("pactl set-sink-mute 0 toogle") },
-	{0, 														XF86XK_AudioLowerVolume, 	 spawn, 	 			SHCMD("pactl set-sink-volume 0 -3%") },
-	{0, 														XF86XK_AudioRaiseVolume, 	 spawn, 	 			SHCMD("pactl set-sink-volume 0 +3%") },
+	{0, 														XF86XK_AudioMute, 				 spawn, 	 			SHCMD("pactl set-sink-mute 0 toogle && pkill -RTMIN+1 dwmblocks") },
+	{0, 														XF86XK_AudioLowerVolume, 	 spawn, 	 			SHCMD("pactl set-sink-volume 0 -3% && pkill -RTMIN+1 dwmblocks") },
+	{0, 														XF86XK_AudioRaiseVolume, 	 spawn, 	 			SHCMD("pactl set-sink-volume 0 +3% && pkill -RTMIN+1 dwmblocks") },
 	{0, 														XF86XK_MonBrightnessUp, 	 spawn, 	 			SHCMD("brightnessctl set +10%") },
 	{0, 														XF86XK_MonBrightnessDown,  spawn, 	 			SHCMD("brightnessctl set 10%-") },
+	{MODKEY|ShiftMask, 							XK_w,                      spawn, 	 			SHCMD("~/.config/rofi/wallpapers_mod.sh") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)

@@ -5,10 +5,10 @@ static const Block blocks[] = {
 
   {" ", "~/dwm-config/scripts/echo_battery.sh", 15, 0},
 
-  {" " , "~/dwm-config/scripts/echo_volume.sh", 1, 0},
+  {" " , "~/dwm-config/scripts/echo_volume.sh", 0, 1},
 
-	{" " , "date '+%d.%m'", 60, 0},
-	{" ", "date '+%H:%M  '", 5, 0},
+	{"  " , "date '+%d/%m/%Y'", 60, 0},
+	{"  ", "date '+%H:%M  '", 5, 0},
 
 };
 

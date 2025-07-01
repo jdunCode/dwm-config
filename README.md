@@ -1,4 +1,4 @@
-![](image.png)
+![](screenshots/image.png)
 
 *Минималистичный оконный менеджер для Arch Linux*
 
@@ -23,6 +23,7 @@ git clone https://github.com/jdunCode/dwm-config.git
 Скопируйте файлы вручную:
 ```bash
 cp -r ~/dwm-config/.config/rofi/ ~/.config/
+cp -r ~/dwm-config/.config/picom/ ~/.config/
 cp ~/dwm-config/startdwm.sh /usr/local/bin/
 cp ~/dwm-config/temp/dwm.desktop /usr/local/share/xsessions/
 make
@@ -34,9 +35,10 @@ sudo make install
 chmod +x install.sh 
 sudo ./install.sh
 ```
-Если хотите конфиг на rofi то:
+Если хотите конфиг на rofi или анимации picom то:
 ```bash
 cp -r ~/dwm-config/.config/rofi/ ~/.config/
+cp -r ~/dwm-config/.config/picom/ ~/.config/
 ```
 ### 2. Для чистого Arch (без DE)
 Добавьте автозапуск в `~/.xinitrc`:
@@ -49,12 +51,12 @@ echo 'exec dwm' >> ~/.xinitrc
 ## ⌨️ Горячие клавиши
 | Комбинация         | Действие                     |
 |--------------------|-----------------------------|
-| `Ctrl+Shift+d`     | Запуск Rofi (app launcher)  |
-| `Ctrl+Shift+Esc`   | Power menu                  |
-| `Ctrl+Shift+f`     | Открыть Firefox            |
-| `Super+Shift+Enter` | Открыть терминал|
-| `Super + b`  | Переключить dmenu          |
+| `Ctrl + Shift + d`     | Запуск Rofi (app launcher)  |
+| `Ctrl + Shift + Esc`   | Power menu                  |
+| `Super + Shift + Enter` | Открыть терминал|
+| `Super + b`  | Скрыть/Показать dwmblocks    |
 | `Super + Space`    | Смена раскладки (us/ru)    |
+| `Super + Shift + w`    | Выбрать обои(не навсвегда)    |
 
 ---
 
