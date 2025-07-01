@@ -1,4 +1,4 @@
-![](screenshots/image.png)
+![](screenshots/1.png)
 
 *Минималистичный оконный менеджер для Arch Linux*
 
